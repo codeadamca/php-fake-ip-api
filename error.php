@@ -8,10 +8,6 @@ foreach($env as $value)
   define($value[0], $value[1]);
 }
 
-echo RAPIDAPI_KEY;
-
-die();
-
 $curl = curl_init();
 
 curl_setopt_array($curl, [
@@ -24,7 +20,7 @@ curl_setopt_array($curl, [
 	CURLOPT_CUSTOMREQUEST => "GET",
 	CURLOPT_HTTPHEADER => [
 		"x-rapidapi-host: fake-random-ip.p.rapidapi.com",
-		"x-rapidapi-key: ".RAPIDAPI_KEY
+		"x-rapidapi-key: ".RAPIDAPI_API_KEY
 	],
 ]);
 
